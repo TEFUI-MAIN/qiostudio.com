@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="QIO Digital Agency">
+<meta property="og:description" content="Make your business work better. Phone 1300 369 388.">
+<meta property="og:image" content="https://qiostudio.com/qio-mark.webp">
+<meta name="theme-color" content="#050608">
+<title>QIO</title>
+<meta name="description" content="QIO Digital Agency. Make your business work better. Phone 1300 369 388.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap">
+<style>
+/* Layout: one dark stage. The glass mark sits centre, the words below it, the phone number is the only loud thing. */
+:root{
+  --bg:#050608; --bg-2:#0b0d11; --fg:#f1f3f3; --muted:#9aa4ad; --line:#1d2228;
+  --red:#fd0100; --blue:#016eaf; --amber:#fe9102; --blue-soft:#8cccf0;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+.wrap{max-width:1120px;margin-inline:auto;min-height:100%;min-height:100dvh;display:flex;flex-direction:column}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:22px 10px}
+.logo{height:34px;width:auto;display:block}
+.tel-top{font-size:15px;font-weight:500;letter-spacing:.01em;text-decoration:none;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.tel-top:hover{color:var(--fg)}
+.hero{flex:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center;align-content:center;gap:clamp(24px,5vw,72px);padding-block:clamp(16px,3vw,40px)}
+.mark{position:relative;aspect-ratio:3/2;max-width:100%;border-radius:18px;overflow:hidden;background:#000}
+.mark img{display:block;width:100%;height:100%;object-fit:cover;max-width:100%}
+.mark::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 60%,transparent 55%,var(--bg) 100%);pointer-events:none}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+h1{font-size:clamp(40px,6vw,72px);line-height:.98;letter-spacing:-.03em;font-weight:600;margin:0;text-wrap:balance}
+h1 span{display:block}
+.lede{font-size:clamp(18px,1.6vw,21px);line-height:1.45;color:var(--muted);max-width:30ch;margin:22px 0 0}
+.lede b{color:var(--fg);font-weight:500}
+.cta{margin-top:34px;display:flex;flex-direction:column;gap:14px}
+.tel{display:inline-flex;align-items:baseline;gap:14px;text-decoration:none;font-weight:600;font-size:clamp(28px,3.6vw,44px);letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums}
+.tel small{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tel:hover{color:var(--blue-soft)}
+.mail{font-size:16px;color:var(--muted);text-decoration:none}
+.mail:hover{color:var(--fg);text-decoration:underline;text-underline-offset:4px}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pillar{padding:26px 22px 28px;border-left:1px solid var(--line);min-width:0}
+.pillar:first-child{border-left:0;padding-left:0}
+.pillar .k{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.dot{width:10px;height:10px;border-radius:50%;flex:none;box-shadow:0 0 14px 1px currentColor}
+.p1 .dot{background:var(--red);color:var(--red)} .p2 .dot{background:var(--blue);color:var(--blue)} .p3 .dot{background:var(--amber);color:var(--amber)}
+.pillar h2{font-size:21px;font-weight:600;letter-spacing:-.015em;line-height:1.2;margin:0 0 6px}
+.pillar p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.5}
+footer{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between;align-items:baseline;padding-block:26px 30px;font-size:13px;color:var(--muted)}
+footer p{margin:0}
+.fmail{color:var(--muted);text-decoration:none}
+.fmail:hover{color:var(--fg);text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--blue-soft);outline-offset:4px;border-radius:4px}
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:18px}
+  .mark{order:-1;aspect-ratio:16/10}
+  .pillars{grid-template-columns:1fr}
+  .pillar{border-left:0;padding-left:0;padding-right:0;border-top:1px solid var(--line)}
+  .pillar:first-child{border-top:0}
+}
+@media (max-width:460px){ .tel-top{display:none} body{font-size:16px} }
+@media (prefers-reduced-motion:no-preference){
+  .mark img{animation:settle 1.4s cubic-bezier(.22,.8,.24,1) both}
+  @keyframes settle{from{opacity:0;transform:scale(1.03)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <svg class="logo" role="img" aria-label="QIO" xmlns="http://www.w3.org/2000/svg"
+	 viewBox="0 0 1886.9587 608.3911">
+<g>
+	<path id="O" fill="#FE9102" d="M1570.7295,486.1719c-101.25,0-183.33-82.08-183.33-183.34s82.08-183.3501,183.33-183.3501
+		s183.3301,82.0901,183.3301,183.3501S1671.9795,486.1719,1570.7295,486.1719z M1885.6096,269.5019
+		c-4.03-59.82-35.7101-124.78-77.1001-168.6299c-88.27-93.51-225.97-124.29-347.1899-82.7299
+		c-85.23,29.23-157.76,96.6399-189.3301,181.3498c-22.1299,59.3902-24.04,124.5-7.21,185.4201c12.2,44.12,34.89,83.27,65.37,117.14
+		c36.4,40.4399,82.74,69.87,134.42,87.12c32.3799,10.7999,64.96,15.7999,99.1799,16.7001c76.8,2.01,151.73-21.8601,211.71-69.52
+		c13.8401-10.99,25.5801-22.5,37.3501-35.5701c41.5699-46.1399,67-103.47,72.9099-165.49
+		C1887.4076,317.5766,1887.371,295.6465,1885.6096,269.5019z"/>
+	<path id="I" fill="#016EAF" d="M1006.1135,544.5952c-0.0308,34.134-31.3683,58.6836-62.7479,58.5413
+		c-31.5437-0.1431-62.1796-25.8847-62.1875-59.6125l-0.112-478.6932c-0.009-38.502,35.6021-65.209,72.5037-59.9597
+		c30.5173,4.3411,53.0026,30.8261,52.9744,62.0279L1006.1135,544.5952z"/>
+	<path id="Q" fill="#FD0100" d="M1.4213,276.6197C11.5986,168.3452,81.7232,79.1623,179.1804,34.6728
+		c130.104-59.393,284.5456-28.6738,380.6094,77.3685c38.9585,43.0053,63.0986,98.0222,71.0181,155.9878
+		c9.955,72.8646-7.3951,146.3368-49.1486,206.9726l26.7098,30.0072c6.6862,7.5116,9.6478,17.6727,11.7742,27.4986
+		c4.3742,20.2122-1.7426,40.7793-15.2419,55.374c-25.4277,27.491-69.5978,27.3564-94.6338-0.4691l-96.97-107.7741l-76.9318-86.114
+		c-22.9874-25.731-18.2158-64.919,6.1046-87.2183c24.235-22.221,63.9065-23.7037,86.8434,1.1816l58.7878,63.7816
+		c18.557-47.0183,14.7477-99.5115-7.3934-144.7463c-28.3414-57.9023-84.5656-96.5404-147.1658-102.3101
+		c-65.8633-6.0705-128.8529,23.6444-166.5957,77.1496c-48.8915,69.31-44.1108,162.1286,11.9371,225.748
+		c43.7026,49.6064,111.0516,71.3977,176.1042,58.2857c32.1184-6.4738,61.8708,14.9365,68.3529,46.0265
+		c7.0295,33.7152-14.0618,64.6685-47.7912,71.2156c-37.5715,7.293-75.0243,7.2608-113.1846,1.5878
+		C128.1482,584.273,14.852,476.7811,1.6003,339.8957C-0.472,318.4893-0.5317,297.3974,1.4213,276.6197z"/>
+</g>
+</svg>
+
+    <a class="tel-top" href="tel:1300369388">Phone: 1300 369 388</a>
+  </header>
+
+  <main class="hero">
+    <div>
+      <p class="eyebrow">QIO · Working Intelligence</p>
+      <h1><span>Make your</span><span>business</span><span>work better.</span></h1>
+      <p class="lede"><b>Less friction. More possibility.</b> Bring us the messy version. One thing that should work better is enough to start.</p>
+      <div class="cta">
+        <a class="tel" href="tel:1300369388"><small>Call</small>1300 369 388</a>
+      </div>
+    </div>
+    <figure class="mark" style="margin:0">
+      <img src="/qio-mark.webp" width="1536" height="1024" alt="The QIO mark in glass: a red Q, a blue I and an amber O, lit on black." decoding="async">
+    </figure>
+  </main>
+
+  <section class="pillars" aria-label="How QIO works">
+    <div class="pillar p1"><p class="k"><span class="dot"></span>01 / People</p><h2>Human at the centre.</h2><p>People own the exceptions. Responsibility stays clear.</p></div>
+    <div class="pillar p2"><p class="k"><span class="dot"></span>02 / Process</p><h2>Less friction. More flow.</h2><p>Information moves once. Teams see what matters.</p></div>
+    <div class="pillar p3"><p class="k"><span class="dot"></span>03 / Technology</p><h2>Connected with purpose.</h2><p>Business first. Technology where it earns its place.</p></div>
+  </section>
+
+  <footer>
+    <p>© 2026 QIO Digital Agency · Part of the Tefui Group of Companies · <a class="fmail" href="mailto:info@tefui.com">info@tefui.com</a></p>
+    <p>Websites · Ecommerce · Automation · Marketing</p>
+  </footer>
+</div>
+</body>
+</html>
